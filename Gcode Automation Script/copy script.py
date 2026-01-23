@@ -1,5 +1,9 @@
-import pyperclip #Library for 
+import pyperclip #Library for Copying things
 import os #The Library for manuevering in the File systems
+import tkinter #Library for app dev
+from tkinter import ttk
+from tkinter import *
+
 
 # The Path of the file for the gcode file
 file_path = r"C:\Users\morei\OneDrive\Documents\GitHub\CPT-101\Gcode Automation Script\3DBenchy_PLA_37m39s.gcode"
@@ -34,3 +38,10 @@ except FileNotFoundError:
     print("can't find it")
 except Exception as e:
     print(f"it broke because {e}")
+
+root = Tk()
+frm = ttk.Frame(root, padding=10)
+frm.grid()
+ttk.Label(frm, text="Hello World").grid(column=0, row=0)
+ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1,row=0)
+root.mainloop()
