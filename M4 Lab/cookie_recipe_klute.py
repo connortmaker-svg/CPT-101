@@ -13,9 +13,9 @@ EGG = 1 #(cups)
 
 # Constants for single (1) cookie, assuming linear recipe
 FLOUR_1 = FLOUR / 10
-BUTTER_1 = 0.5 / 10
-SUGAR_1 = 0.75 / 10
-EGG_1 = 1 / 10
+BUTTER_1 = BUTTER / 10
+SUGAR_1 = SUGAR / 10
+EGG_1 = EGG / 10
 
 #Introduction to Recipe Program
 print("\nThis program will help you bake grandma's favorite cookies!\n")
