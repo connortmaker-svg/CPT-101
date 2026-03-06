@@ -15,9 +15,6 @@ if weight <=0:
 elif weight > 20:
     print("20lbs or heavy packages cannot be shipped")
 else:
-    #Checking shipping type
-    shipping_type = input("Enter Shipping Type ('D' for Domestic, 'I' for International): ")
-
     # Determine the base cost based on weights
     if weight <= 2:
         base_cost = 5.00
@@ -28,6 +25,9 @@ else:
     else:
         base_cost = 18.00
 
+    #Checking shipping type
+    shipping_type = input("Enter Shipping Type ('D' for Domestic, 'I' for International): ")
+
     # Caculate final cost
     valid_input = True
     final_cost = base_cost
@@ -36,7 +36,7 @@ else:
     elif shipping_type == "D":
         final_cost = base_cost
     else:
-        print("invalid Input")
+        print("Invalid Input")
         valid_input = False
 
     # Give final Summary
