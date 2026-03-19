@@ -5,21 +5,20 @@
 # Area Calculator
 # ----------------------------------
 
-print("TITLE")
-print("USER DIRECTIONS")
+print("Rectangle Area/Perimeter Calculator\n")
 
 # Ask user for height -> then ask for width [error any invalid inputs]
 height = float(input("Input the height of the rectangle:  "))
 
 if height < 0:
-    print("Distance values cannot be negative. Please restart the Calculator.")
+    print("\nDistance values cannot be negative. Please restart the Calculator.")
 else:
     width = float(input("Input the width of the rectangle:  "))
 
     if width < 0:
-        print("Distance value are not negative. Please restart the Calculator.")
+        print("\nDistance value are not negative. Please restart the Calculator.")
     else:
-        # Perfom Area Calculations Needed
+        # Perform Area Calculations Needed
         area = height * width
         perimeter = (height * 2) +(2 * width)
 
