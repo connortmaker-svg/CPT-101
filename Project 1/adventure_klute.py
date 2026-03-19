@@ -11,7 +11,7 @@ print("You stand at the entrance of the dark, smoky cave.\n")
 print("What do you do?\n")
 print("1. Enter the Cave with a sword.")
 print("2. Enter the Cave with a custom built gadget")
-print("3. Turn back and go the tavern for a drink")
+print("3. Turn back and go to the tavern for a drink")
 
 # User input for initial choice
 int_choice = input("\nWhat is your choice? Enter 1, 2, or 3 to continue: ")

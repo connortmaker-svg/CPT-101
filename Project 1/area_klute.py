@@ -16,11 +16,11 @@ else:
     width = float(input("Input the width of the rectangle:  "))
 
     if width < 0:
-        print("\nDistance value are not negative. Please restart the Calculator.")
+        print("\nDistance value cannot negative. Please restart the Calculator.")
     else:
         # Perform Area Calculations Needed
         area = height * width
-        perimeter = (height * 2) +(2 * width)
+        perimeter = (height * 2) + (2 * width)
 
         # User Outputs
         print("\nRESULTS\n")
