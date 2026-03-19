@@ -6,7 +6,7 @@
 # ----------------------------------
 
 print("The Mishaps of a 'Knight'")
-print("A massive blue dragon is terroirizng the local town, and you have been chosen as the knight to take it down.\n")
+print("A massive blue dragon is terrorizing the local town, and you have been chosen as the knight to take it down.\n")
 print("You stand at the entrance of the dark, smoky cave.\n")
 print("What do you do?\n")
 print("1. Enter the Cave with a sword.")
@@ -38,24 +38,24 @@ if int_choice == "1":
 elif int_choice == "2":
     print("\n You enter with your gadet in hand, however the battery starts smoking!\n")
     print("1. Try to recalibrate the gadegt.")
-    print("2. Throw the gadegt at the dragons' snout")
-    print("3. Use the gadget as a flashlight")
+    print("2. Throw the gadet at the dragons' snout")
+    print("3. Use the gadet as a flashlight")
     choice_22 = input("\n What do you do?!  ")
 
     # Secondary choices of Branch 2 starting
     if choice_22 == "1":
         print("\nYou get a Blue Screen of Death. While distracted the dragon eats you")
     elif choice_22 == "2":
-        print("\nThe gadget bounces off the dragon, not inflicting any harm whatsoever. The dragon isnt amused, and proceeds to eat you.")
+        print("\nThe gadet bounces off the dragon, not inflicting any harm whatsoever. The dragon isnt amused, and proceeds to eat you.")
     elif choice_22 == "3":
         print("\nYou had it pointing the wrong way!! You are now blinded, and the dragon then eats you.")
     else:
-        print("\nInvalid Input: Your gadget short circuts and electricutes you where you stand.")
+        print("\nInvalid Input: Your gadet short circuts and electricutes you where you stand.")
 
 # Branch 3 Start
 elif int_choice == "3":
     print("\nYou have decided that the dragon is not worth it. You head down to the 'Salty Spitoon'for a drink\n")
-    print("1. Order a glass of a susiciouis green liquid.")
+    print("1. Order a glass of a suspicious liquid.")
     print("2. Challeng the local blacksmith to a duel.")
     print("3. Sit by the fireplace to warm up.")
     choice_23 = input("\n What do you want to do?")
