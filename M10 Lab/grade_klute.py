@@ -13,25 +13,25 @@ def letter_grade(score):
     #If else block logic
     if score >= 93:
         grade = "A"
-    if score >= 90:
+    elif score >= 90:
         grade = "A-"
-    if score >= 87:
+    elif score >= 87:
         grade = "B+"
-    if score >= 83:
+    elif score >= 83:
         grade = "B"
-    if score >= 80:
+    elif score >= 80:
         grade = "B-"
-    if score >= 77:
+    elif score >= 77:
         grade = "C+"
-    if score >= 73:
+    elif score >= 73:
         grade = "C"
-    if score >= 70:
+    elif score >= 70:
         grade = "C-"
-    if score >= 67:
+    elif score >= 67:
         grade = "D+"
-    if score >= 63:
+    elif score >= 63:
         grade = "D"
-    if score >= 60:
+    elif score >= 60:
         grade = "D-"
     else:
         grade = "F"
