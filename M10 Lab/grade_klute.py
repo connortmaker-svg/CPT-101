@@ -6,7 +6,6 @@
 # ----------------------------------
 
 # Function that Determines the Grade that assigns letter grades based on numeric score
-
 def letter_grade(score):
     grade = "" #Empty String
 
@@ -39,12 +38,15 @@ def letter_grade(score):
     return grade #Single return for grade (make it clean)
 
 def main():
-    for i in range(3):
+    # Variable to track which numbered student grade it is
+    student_num = 1
+    for i in range(3):      
         input_score = float(input("PLease Enter your Numeric Grade [0 - 100]"))
         letter = letter_grade(input_score)
-
+        
         # User Output
-        print(f"Your Letter grade is {letter}!\n\n")
+        print(f"Student #{student_num}; Your Letter grade is {letter}!\n\n")
+        student_num = student_num + 1
 
 # Runs the Program
 main()
