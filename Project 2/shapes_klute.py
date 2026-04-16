@@ -144,6 +144,51 @@ def draw_triangle(x, y, side, color):
     turtle.end_fill()
 
 def main():
+    # Setup the Main Turtle Windows
+    turtle.setup(600,600)
 
+    # Constants to Check Against
+    MIN_COORD = -300
+    MAX_COORD = 300
+    MIN_SIZE = 1
+    MAX_SIZE = 300
 
+    is_first_run = True
+    choice = 0 
+
+    # Main Loop to Start Program
+    while choice != 4:
+        # Starts the Menu
+        choice = get_menu_input(is_first_run)
+        is_first_run =  False
+
+        if choice == 4:
+            print("\nGoodBye")
+        else:
+            # The Condition if the User didn't Exit the Program
+
+            # Get user Input with Color
+            color = get_color()
+
+            # Get User Input with Coordinates
+            print("\nThe Starting Position is in the Center of the Window (0,0)")
+            x = get_coords('x', MIN_COORD, MAX_COORD)
+            print()
+            y = get_coords('y', MIN_COORD, MAX_COORD)
+            print()
+
+            # Get User Input of Size
+            size = get_size(choice, MIN_SIZE, MAX_SIZE)
+
+            # Extra Line to Say it's Doing Something
+            print("\nDrawing Shape in the Turtle Window.....")
+
+            # Choose Which Shape to Draw Based on User Input
+            if choice == 1:
+                draw_circle(x, y, size, color)
+            elif choice == 2:
+                draw_square(x, y, size, color)
+            elif choice == 3:
+                draw_triangle(x, y, size, color)
+             
 main()
