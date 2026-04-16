@@ -5,7 +5,7 @@
 # Generating Shapes with Turtle
 # ----------------------------------
 
-import turtle # For the 
+import turtle # For the main thing of the program
 
 def get_menu_input(is_new_run):
     # Create a Menu for the USER to interact with
@@ -165,6 +165,7 @@ def main():
 
         if choice == 4:
             print("\nGoodBye")
+            turtle.bye()
         else:
             # The Condition if the User didn't Exit the Program
 
