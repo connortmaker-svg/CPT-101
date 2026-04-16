@@ -66,17 +66,17 @@ def get_size(choice, min_val, max_val):
     if choice == 1:
         print("Input a Radius to draw the Circle\n")
         prompt = f"What is the radius? ({min_val} to {max_val}) "
-        reprompt = "What is the radius? "
+        reprompt = f"What is the radius? ({min_val} to {max_val})"
         error_msg = f"Please select a value between {min_val} and {max_val}.\n"
     elif choice == 2:
         print("Input a Length of the Side to draw the Square\n")
         prompt = f"What is the length of the side? ({min_val} to {max_val}) "
-        reprompt = "What is the length of the side? "
+        reprompt = f"What is the length of the side? ({min_val} to {max_val}) "
         error_msg = f"Please select a value between {min_val} and {max_val}.\n"
     elif choice == 3:
         print("Input a Length of the Side to draw the Triangle\n")
         prompt = f"What is the length of the side? ({min_val} to {max_val}) "
-        reprompt = "What is the length of the side? "
+        reprompt = f"What is the length of the side? ({min_val} to {max_val})"
         error_msg = f"Please select a value between 0 and {max_val}.\n"
 
     # Initial variables to check against (Notice these are aligned to the left!)
