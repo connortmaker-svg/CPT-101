@@ -1,0 +1,113 @@
+Shape Drawing Program
+
+ This program can draw three different shapes
+
+1. Draw Circle
+2. Draw Square
+3. Draw Equilateral Triangle
+4. Exit Program
+Which taks would you like to perform?  1
+
+What Color would you like the shape to be? (red, orange, purple)blue
+Not a Valid Option
+What Color would you like the shape to be? (red, orange, purple)red
+
+The Starting Position is in the Center of the Window (0,0)
+What is the x value for your desired start location? (-300 to 300) -500
+Not Valid Input 
+
+What is the x value for your desired start location? (-300 to 300) 400
+Not Valid Input 
+
+What is the x value for your desired start location? (-300 to 300) 100
+
+What is the y value for your desired start location? (-300 to 300) -500
+Not Valid Input 
+
+What is the y value for your desired start location? (-300 to 300) 100
+
+Input a Radius to draw the Circle
+
+What is the radius? (1 to 300) 1000
+Please select a value between 1 and 300.
+
+What is the radius? 150
+
+Drawing Shape in the Turtle Window.....
+
+ This program can draw three different shapes
+
+1. Draw Circle
+2. Draw Square
+3. Draw Equilateral Triangle
+4. Exit Program
+Which taks would you like to perform?   2
+
+What Color would you like the shape to be? (red, orange, purple)purple
+
+The Starting Position is in the Center of the Window (0,0)
+What is the x value for your desired start location? (-300 to 300) -100
+
+What is the y value for your desired start location? (-300 to 300) -100
+
+Input a Length of the Side to draw the Square
+
+What is the length of the side? (1 to 300) 0
+Please select a value between 1 and 300.
+
+What is the length of the side? 200
+
+Drawing Shape in the Turtle Window.....
+
+ This program can draw three different shapes
+
+1. Draw Circle
+2. Draw Square
+3. Draw Equilateral Triangle
+4. Exit Program
+Which taks would you like to perform?  3
+
+What Color would you like the shape to be? (red, orange, purple)orange
+
+The Starting Position is in the Center of the Window (0,0)
+What is the x value for your desired start location? (-300 to 300) -400
+Not Valid Input 
+
+What is the x value for your desired start location? (-300 to 300) 200
+
+What is the y value for your desired start location? (-300 to 300) -400
+Not Valid Input 
+
+What is the y value for your desired start location? (-300 to 300) -200
+
+Input a Length of the Side to draw the Triangle
+
+What is the length of the side? (1 to 300) 0
+Please select a value between 0 and 300.
+
+What is the length of the side? 301
+Please select a value between 0 and 300.
+
+What is the length of the side? 200
+
+Drawing Shape in the Turtle Window.....
+
+ This program can draw three different shapes
+
+1. Draw Circle
+2. Draw Square
+3. Draw Equilateral Triangle
+4. Exit Program
+Which taks would you like to perform?  9
+
+Not Valid Menu Option
+
+ This program can draw three different shapes
+
+1. Draw Circle
+2. Draw Square
+3. Draw Equilateral Triangle
+4. Exit Program
+Which taks would you like to perform?  4
+
+GoodBye
