@@ -9,14 +9,14 @@
 def get_option():
     choice = 0
     is_valid = False
-    while is_valid == False
+    while is_valid == False:
         try:
             choice = int(input("Choose an Option (1-8):  "))
             if 1<= choice <= 8:
                 is_valid = True
             else:
                 print("ENTER A VALID NUMBER")
-        except:
+        except ValueError:
             print("INVALID INPUT")
     return choice
 
@@ -28,7 +28,7 @@ def good_temp():
         try:
             temp = float(input("Enter the temperature in Fahrenheit"))
             is_valid = True
-        except:
+        except ValueError:
             print("INVALID INPUT")
     return temp
 
@@ -43,7 +43,7 @@ def positive_value():
                 is_valid = True
             else:
                 print("ENTER A VALUE GREATER THAN 0")
-        except:
+        except ValueError:
             print("INVALID INPUT")
     return val
     
@@ -70,7 +70,7 @@ def to_liters(quarts):
     return quarts / 1.057
 
 def convert_temp():
-    f = good_temp
+    f = good_temp()
     c = to_celsius(f)
     print(f"\nResult: {f} Fahrenheit is {c:.2f} Celsius")
 
