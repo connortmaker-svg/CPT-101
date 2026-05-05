@@ -6,7 +6,7 @@
 # ----------------------------------
 
 # Main Starting loop to get and verify the option of the user
-def get_option():
+def menu_option():
     choice = 0
     is_valid = False
     while is_valid == False:
@@ -122,7 +122,7 @@ def main():
         print(" 8. Exit Program")
         print("="*35)
         # Pass the users input to the option checker
-        user_input = get_option()
+        user_input = menu_option()
 
         # Logic Checker for the menu options 
         if user_input == 1:
