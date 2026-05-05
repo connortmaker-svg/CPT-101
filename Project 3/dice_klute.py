@@ -20,9 +20,9 @@ def get_rolls():
             if rolls > 0:
                 is_valid = True
             else:
-                print("Plase Enter a Valid number Greater than 0")
+                print("NUMBER MUST BE POSITIVE")
         except ValueError:
-            print("INVALID INPUT")
+            print("INVALID INPUT: MUST BE POSITIVE INTEGER")
     return rolls
 
 def increment_roll_count(current_count):
@@ -35,7 +35,7 @@ def stats_dispaly(number, count, total):
         percentage = (count / total) * 100
     else:
         percentage = 0.0
-    print(f"Number {number}: Count = {count}, Percentage = {percentage:.1f}%")
+    print(f"Rolled {number} - {count} times - %{percentage:.2f}")
 
 def write_file(file, num_roll):
     # Writes the data of the rolls to an external .txt file
@@ -69,6 +69,16 @@ def main():
 
     # Make the File
     write_file(file, total_rolls)
+
+    # Print the Current Rolls to the Terminal
+    try:
+        with open(file, "r") as dice_file:
+            for line in dice_file:
+                print(line.strip(), end=" ")
+        dice_file.close()
+        print("\n\nFinshed rolling the dice")
+    except FileNotFoundError:
+        print("FILE NOT FOUND")
 
     print(f"Analying {total_rolls} rolls...\n")
 
