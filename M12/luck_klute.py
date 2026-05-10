@@ -30,7 +30,7 @@ def main():
     if user_input == 0:
         luck = random.choice(tools)
     else:
-        luck = tools[input - 1]
+        luck = tools[user_input - 1]
     # Outcome
     print(f"You Lucky tool is a {luck}.")
 
