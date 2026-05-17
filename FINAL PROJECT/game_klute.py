@@ -2,11 +2,10 @@
 # Connor Klute
 # CPT 101 - Shaffer
 # Final Project
-# Adventure Quest
+# Text-Base TUI Adventure Quest
 # ----------------------------------
 
 import random # For Random Functionality
-import sys # For dynamically closing the program
 
 def display_menu():
     # Prints out the Menu for the User to Interact with.
@@ -47,7 +46,7 @@ def explore_scene(health, gold):
     if scenario == 1:
         # Each Scenario follows the same layout of code
         # Found gold
-        print("You stumble onto a pile of ungruard gold near a drake's nest!")
+        print("You stumble onto a pile of unguarded gold near a drake's nest!")
 
         # Random Selection
         coins = random.randint(10,40)
@@ -109,11 +108,11 @@ def encounters(health, gold, inventory):
     # Logic Block for different encounters:
     if encounter == 1:
         # Gain an Item
-        print("\nAn old wizard approaches. He ands you a Dragon-bone Wand")
+        print("\nAn old wizard approaches. He hands you a Dragon-bone Wand")
         # Add Item to inventory:
         inventory.append("Dragon-Bone Wand")
         # Show the User their current inventory
-        print("Your Invnetory:")
+        print("Your Inventory:")
         print_list(inventory)
     
     elif encounter == 2:
@@ -172,7 +171,7 @@ def final_boss(health, gold, inventory):
     print("\nYou Have chosen to face the 7 Headed Dragon!")
     # Logic Check if player has needed stats to face the boss
     if health > 0 and gold >= 100 and num_items >= 4:
-        print("You've arrived prepared to deaft the 7 Headed Dragon and Take it Down with ease!!")
+        print("You've arrived prepared to defeat the 7 Headed Dragon and Take it Down with ease!!")
         return True # Returning True means game_over becomes True
     else:
         print("You are not ready!")
