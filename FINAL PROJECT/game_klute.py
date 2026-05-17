@@ -164,13 +164,6 @@ def print_list(inventory):
     for item in inventory:
         print(item)
 
-def final_boss_option(health, gold, inventory):
-    num_items = len(inventory)
-    if health > 0 and gold >= 100 and num_items >= 4:
-        final_boss()
-    else:
-        print("Come back when you are actually ready")
-
 def final_boss(health, gold, inventory):
     num_items = len(inventory)
     print("\nYou Have chosen to face the 7 Headed Dragon!")
@@ -218,8 +211,8 @@ def main():
     print("Defeat the 7 Headed Dragon by staying alive and earning enough treasures!")
 
     # MAIN GAME LOOP
-    while not game_over:
-        choice = menu_select
+    while game_over == False:
+        choice = menu_select()
 
         # Menu Choice Tree
         if choice == 1:
