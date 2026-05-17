@@ -10,11 +10,13 @@ import sys # For dynamically closing the program
 
 def display_menu():
     # Prints out the Menu for the User to Interact with.
+    print()
     print("1 | Explore your Surroundings")
     print("2 | Have an Encounter")
     print("3 | View Inventory and Player Stats")
-    print("4 | Fight the Dungeon Boss")
+    print("4 | Fight the 7 Headed Dragon")
     print("5 | Exit the Game")
+    print()
 
 def menu_select():
     # Initalization Variables
@@ -24,7 +26,7 @@ def menu_select():
         try:
             display_menu()
             # Inital User Input
-            option = int(input("Enter a Menua Option between 1 and 5:"))
+            option = int(input("Enter a Menu Option between 1 and 5:"))
             # Range Validation
             if option >=1 and option <=5:
                 v_input = True
@@ -107,7 +109,7 @@ def encounters(health, gold, inventory):
     # Logic Block for different encounters:
     if encounter == 1:
         # Gain an Item
-        print("An old wizard approaches. He ands you a Dragon-bone Wand")
+        print("\nAn old wizard approaches. He ands you a Dragon-bone Wand")
         # Add Item to inventory:
         inventory.append("Dragon-Bone Wand")
         # Show the User their current inventory
@@ -116,7 +118,7 @@ def encounters(health, gold, inventory):
     
     elif encounter == 2:
         # Gain two Items
-        print("You find the remains of a fallen dragon-slayer. You respectfully take their gear.")
+        print("\nYou find the remains of a fallen dragon-slayer. You respectfully take their gear.")
         inventory.append("Steel Shield")
         inventory.append("Vial of Dragon Tears")
         print("Your inventory:")
@@ -124,7 +126,7 @@ def encounters(health, gold, inventory):
         
     elif encounter == 3:
         # Lose an Item
-        print("A swift Kobold darts out of the shadows and tries to snatch your gear!")
+        print("\nA swift Kobold darts out of the shadows and tries to snatch your gear!")
         # Checks if you have any items to steal
         if len(inventory) > 0:
             stolen_item = inventory.pop(0)
@@ -136,7 +138,7 @@ def encounters(health, gold, inventory):
     
     elif encounter == 4:
         # Gain an Item; lose gold
-        print("A Dwarven blacksmith offers to sell you a Mithril Dagger for 15 gold.")
+        print("\nA Dwarven blacksmith offers to sell you a Mithril Dagger for 15 gold.")
         inventory.append("Mithril Dagger")
         gold -= 15
         print("Your inventory:")
@@ -145,12 +147,13 @@ def encounters(health, gold, inventory):
         
     elif encounter == 5:
         # Zero Items to be Collected
-        print("You carefully sneak past a sleeping Red Dragon. It's best not to wake it.")
+        print("\nYou carefully sneak past a sleeping Red Dragon. It's best not to wake it.")
         print("You quietly slip away without gaining or losing anything.")
     
     return health, gold, inventory
 
 def display_stats(health, gold, inventory):
+    print()
     # Takes in the Current Health, Gold, and inventory list of the player then will print it out. 
     print("Current Player Stats:")
     print(f"Gold Coins: {gold}")
@@ -223,7 +226,7 @@ def main():
             display_stats(health, gold, inventory)
         elif choice == 4:
             # Reassign game_over to True if they win, False if they lose; and will continue the loop
-            game_over = final_boss_option(health, gold, inventory)
+            game_over = final_boss(health, gold, inventory)
         elif choice == 5:
             exit(health, gold, inventory)
             game_over = True # Breaks the loop to exit the program
