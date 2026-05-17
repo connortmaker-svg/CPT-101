@@ -206,16 +206,33 @@ def exit(health, gold, inventory):
         print("-- Actually, you were completely ready! Why didn't You FIGHT!")
 
 def main():
+    # Inital Player Setup
     gold = 20
     health = 10
     inventory = []
-
     game_over = False
 
-    if game_over == False:
-        # Do everything
-        return 1
-    else:
-        exit():
+    # Intro Message:
+    print("Welcome to Adventure Quest")
+    print("Survive, collect treasures, and reach the 7 Headed Dragon!")
+    print("Defeat the 7 Headed Dragon by staying alive and earning enough treasures!")
+
+    # MAIN GAME LOOP
+    while not game_over:
+        choice = menu_select
+
+        # Menu Choice Tree
+        if choice == 1:
+            health, gold, = explore_scene(health, gold)
+        elif choice == 2:
+            health, gold, inventory = encounters(health, gold, inventory)
+        elif choice == 3:
+            display_stats(health, gold, inventory)
+        elif choice == 4:
+            # Reassign game_over to True if they win, False if they lose; and will continue the loop
+            game_over = final_boss_option(health, gold, inventory)
+        elif choice == 5:
+            exit(health, gold, inventory)
+            game_over = True # Breaks the loop to exit the program
 
 main()
