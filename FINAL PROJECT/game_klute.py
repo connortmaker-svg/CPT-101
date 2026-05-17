@@ -188,7 +188,10 @@ def final_boss(health, gold, inventory):
 def exit(health, gold, inventory):
     print("\nYou gave up and ran away")
     # Show Player Stats
-    display_stats(health, gold, inventory)
+    print("\nYour Current Stats:")
+    print(f"Gold Coins: {gold}")
+    print(f"Health Points: {health}")
+    print(f"Number of items: {len(inventory)}")
     # Show what the Player would have needed
     print("\nTo defeat the 7 Headed Dragon, you would have needed:")
     if gold < 100:
