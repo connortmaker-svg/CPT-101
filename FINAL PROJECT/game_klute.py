@@ -54,6 +54,7 @@ def explore_scene(health, gold):
         print(f"You now have {gold} coins")
     
     elif scenario == 2:
+        # Lose Health
         print("A wyvern swoops down and grazes you with its fiery breath")
         health_lost = random.randint(1, 3)
         health -= health_lost
@@ -61,6 +62,7 @@ def explore_scene(health, gold):
         print(f"You now have {health} health points.")
         
     elif scenario == 3:
+        # Gain Health
         print("You discover a glowing, magical spring blessed by Elves.")
         health_gained = random.randint(2, 5)
         health += health_gained
@@ -68,6 +70,7 @@ def explore_scene(health, gold):
         print(f"You now have {health} health points.")
         
     elif scenario == 4:
+        # Lose Gold
         print("A sneaky forest goblin cuts your coin purse while you were watching the skies")
         coins_lost = random.randint(5, 15)
         gold -= coins_lost
@@ -75,6 +78,7 @@ def explore_scene(health, gold):
         print(f"You now have {gold} gold coins.")
     
     elif scenario == 5:
+        # Lose Health; Gain Gold
         print("You fight off a group of skeletons guarding an ancient chest")
         health_lost = random.randint(1, 2)
         coins = random.randint(15, 30)
@@ -84,6 +88,7 @@ def explore_scene(health, gold):
         print(f"You now have {health} health points and {gold} gold coins.")
         
     elif scenario == 6:
+        # Lose Gold; Gain health
         print("You meet a wandering alchemist who forces you to buy a dragon-blood elixir.")
         coins_lost = random.randint(5, 10)
         health_gained = random.randint(1, 4)
@@ -168,11 +173,8 @@ def final_boss_option(health, gold, inventory):
 
 def final_boss():
     print("CONGRATS YOUR DID IT")
-    output_game()
     exit()
 
-def output_game():
-    # Prints everything to a .txt file for viewing at a later date
 
 def exit():
     print("\nGoodbye")
