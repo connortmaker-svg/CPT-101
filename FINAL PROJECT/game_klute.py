@@ -41,6 +41,7 @@ def explore_scene(health, gold):
 
     # Random Selection for scenarios
     scenario = random.randint(1,6)
+
     if scenario == 1:
         # Each Scenario follows the same layout of code
         # Found gold
@@ -94,13 +95,54 @@ def explore_scene(health, gold):
     return health, gold
 
 def encounters(health, gold, inventory):
-    # Encounter 1
-    # Encounter 2
-    # Encounter 3
-    # Encounter 4
-    # Encounter 5
-    # Encounter 6
-    # Encounter 7
+    print("\nYou look around and spot someone...... or something..... approaching...")
+
+    # Random select of encounters
+    encounter = random.randint(1,5)
+    # Logic Block for different encounters:
+    if encounter == 1:
+        # Gain an Item
+        print("An old wizard approaches. He ands you a Dragon-bone Wand")
+        # Add Item to inventory:
+        inventory.append("Dragon-Bone Wand")
+        # Show the User their current inventory
+        print("Your Invnetory:")
+        print_list(inventory)
+    
+    elif encounter == 2:
+        # Gain two Items
+        print("You find the remains of a fallen dragon-slayer. You respectfully take their gear.")
+        inventory.append("Steel Shield")
+        inventory.append("Vial of Dragon Tears")
+        print("Your inventory:")
+        print_list(inventory)
+        
+    elif encounter == 3:
+        # Lose an Item
+        print("A swift Kobold darts out of the shadows and tries to snatch your gear!")
+        # Checks if you have any items to steal
+        if len(inventory) > 0:
+            stolen_item = inventory.pop(0)
+            print(f"Oh no! The Kobold ran away with your {stolen_item}.")
+            print("Your inventory:")
+            print_list(inventory)
+        else:
+            print("Your inventory is already empty. The Kobold hisses and runs away.")
+    
+    elif encounter == 4:
+        # Gain an Item; lose gold
+        print("A Dwarven blacksmith offers to sell you a Mithril Dagger for 15 gold.")
+        inventory.append("Mithril Dagger")
+        gold -= 15
+        print("Your inventory:")
+        print_list(inventory)
+        print(f"You paid the blacksmith and now have {gold} gold coins.")
+        
+    elif encounter == 5:
+        # Zero Items to be Collected
+        print("You carefully sneak past a sleeping Red Dragon. It's best not to wake it.")
+        print("You quietly slip away without gaining or losing anything.")
+    
     return health, gold, inventory
 
 def display_stats(health, gold, inventory):
