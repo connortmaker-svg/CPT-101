@@ -22,9 +22,9 @@ def menu_select():
     option = 0
     while not v_input:
         try:
+            display_menu()
             # Inital User Input
             option = int(input("Enter a Menua Option between 1 and 5:"))
-            display_menu()
             # Range Validation
             if option >=1 and option <=5:
                 v_input = True
