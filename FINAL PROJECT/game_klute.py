@@ -171,14 +171,39 @@ def final_boss_option(health, gold, inventory):
     else:
         print("Come back when you are actually ready")
 
-def final_boss():
-    print("CONGRATS YOUR DID IT")
-    exit()
+def final_boss(health, gold, inventory):
+    num_items = len(inventory)
+    print("\nYou Have chosen to face the 7 Headed Dragon!")
+    # Logic Check if player has needed stats to face the boss
+    if health > 0 and gold >= 100 and num_items >= 4:
+        print("You've arrived prepared to deaft the 7 Headed Dragon and Take it Down with ease!!")
+        return True # Returning True means game_over becomes True
+    else:
+        print("You are not ready!")
+        # Let the user know exactly what they are missing
+        if gold < 100:
+            print(f"You need {100 - gold} more gold coins.")
+        if health <= 0:
+            print("Your health is too low! You need to be above 0.")
+        if num_items < 4:
+            print(f"You need {4 - num_items} more item(s).")
 
+    return False
 
-def exit():
-    print("\nGoodbye")
-    sys.quit()
+def exit(health, gold, inventory):
+    print("\nYou gave up and ran away")
+    # Show Player Stats
+    display_stats(health, gold, inventory)
+    # Show what the Player would have needed
+    print("\nTo defeat the 7 Headed Dragon, you would have needed:")
+    if gold < 100:
+        print(f"-- {100 - gold} more gold coins")
+    if health <= 0:
+        print(f"-- Health above 0 (You need at least {1 - health} more points)")
+    if len(inventory) < 4:
+        print(f"-- {4 - len(inventory)} more item(s)")
+    if gold >= 100 and health > 0 and len(inventory) >= 4:
+        print("-- Actually, you were completely ready! Why didn't You FIGHT!")
 
 def main():
     gold = 20
